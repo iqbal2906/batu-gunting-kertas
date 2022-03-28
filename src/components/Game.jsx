@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Game = ({ score, myChoice, setScore }) => {
   const [house, setHouse] = useState("");
@@ -49,6 +50,9 @@ const Game = ({ score, myChoice, setScore }) => {
       {playerWin === "menang" && <h2>Kamu Menang</h2>}
       {playerWin === "kalah" && <h2>Kamu Kalah</h2>}
       {playerWin === "imbang" && <h2>Seimbang</h2>}
+      <Link to="/" onClick={() => setHouse()}>
+        Main Lagi
+      </Link>
     </div>
   );
 };
